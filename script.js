@@ -15,6 +15,7 @@ At end of quiz, give option to add initials
 display leaderboard
 */
 var timer;
+var won = false;
 var timeCount = 60;
 var currQ = 0;
 var timerEl = document.querySelector(".timer");
@@ -80,28 +81,34 @@ function setQuestion() {
 
 function init() {
   setQuestion();
+  startTimer();
 }
 
 function startTimer() {
   // Sets timer
   timer = setInterval(function () {
-    timerCount--;
-    timerElement.textContent = timerCount;
-    if (timerCount >= 0) {
+    timeCount--;
+    timerEl.textContent = timeCount;
+    if (timeCount >= 0) {
       // Tests if win condition is met
-      if (isWin && timerCount > 0) {
+      if (won && timeCount > 0) {
         // Clears interval and stops timer
         clearInterval(timer);
-        winGame();
+        endGame(timeCount);
       }
     }
     // Tests if time has run out
-    if (timerCount === 0) {
+    if (timeCount === 0) {
       // Clears interval
       clearInterval(timer);
-      loseGame();
+      endGame(timeCount);
     }
   }, 1000);
+}
+
+function endGame(score) {
+  localStorage.setItem("newScore", score);
+  console.log(score);
 }
 
 init();
@@ -117,10 +124,16 @@ answersEl.addEventListener("click", function (event) {
     } else {
       response = "Wrong!";
       timeCount -= 10;
+      timerEl.textContent = timeCount;
     }
     currQ++;
     responseEl.textContent = response;
-    setQuestion();
+    if (currQ >= questions.length) {
+      won = true;
+      console.log("Complete");
+    } else {
+      setQuestion();
+    }
   }
 });
 //console.log(answersEl.children);
