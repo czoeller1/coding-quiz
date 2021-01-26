@@ -136,4 +136,3 @@ answersEl.addEventListener("click", function (event) {
     }
   }
 });
-//console.log(answersEl.children);
