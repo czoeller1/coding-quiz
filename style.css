@@ -45,3 +45,12 @@ main {
   margin-bottom: 10px;
   font-size: 18px;
 }
+#answers {
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#response {
+  margin: 0 auto;
+}
