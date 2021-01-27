@@ -4,10 +4,10 @@ A small quiz program composed of 5 web development related questions. The user h
 
 https://czoeller1.github.io/coding-quiz/
 
-![Start screen of the Quiz](https://github.com/czoeller1/coding-quiz/blob/main/start.jpeg)
+![Start screen of the Quiz](https://github.com/czoeller1/coding-quiz/blob/main/start.jpg)
 
-![Random quiz question](https://github.com/czoeller1/coding-quiz/blob/main/quiz.jpeg)
+![Random quiz question](https://github.com/czoeller1/coding-quiz/blob/main/quiz.jpg)
 
-![End screen with score](https://github.com/czoeller1/coding-quiz/blob/main/endScore.jpeg)
+![End screen with score](https://github.com/czoeller1/coding-quiz/blob/main/endScore.jpg)
 
-![Scoreboard with 2 entries](https://github.com/czoeller1/coding-quiz/blob/main/scores.jpeg)
+![Scoreboard with 2 entries](https://github.com/czoeller1/coding-quiz/blob/main/scores.jpg)
