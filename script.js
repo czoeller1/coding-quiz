@@ -109,6 +109,7 @@ function startTimer() {
 function endGame(score) {
   localStorage.setItem("newScore", score);
   console.log(score);
+  window.location.href = "endScreen.html";
 }
 
 init();
