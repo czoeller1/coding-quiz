@@ -21,7 +21,7 @@ var currQ = 0;
 var timerEl = document.querySelector(".timer");
 var questionEl = document.querySelector(".question");
 var answersEl = document.querySelector("#answers");
-var responseEl = document.querySelector("#response");
+var responseEl = document.querySelector(".response");
 
 var q1 = {
   ques: "Which language is responsible for webpage responsiveness?",
@@ -101,7 +101,7 @@ function startTimer() {
     if (timeCount === 0) {
       // Clears interval
       clearInterval(timer);
-      endGame(timeCount);
+      endGame(-1);
     }
   }, 1000);
 }
