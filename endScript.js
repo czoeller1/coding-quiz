@@ -10,11 +10,15 @@ submit.addEventListener("click", function (event) {
   var scoreBoard = localStorage.getItem("scoreBoard");
   if (scoreBoard !== null) {
     scoreBoard = JSON.parse(scoreBoard);
-    scoreBoard.append({ name: initials.value, score: score });
+    scoreBoard.push({ name: initials.value, score: score });
   } else {
     scoreBoard = [{ name: initials.value, score: score }];
   }
   localStorage.setItem("scoreBoard", JSON.stringify(scoreBoard));
 
   window.location.href = "scoreBoard.html";
+});
+
+document.querySelector(".score").addEventListener("click", function () {
+  document.location.href = "scoreBoard.html";
 });

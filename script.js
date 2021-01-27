@@ -137,3 +137,7 @@ answersEl.addEventListener("click", function (event) {
     }
   }
 });
+
+document.querySelector(".score").addEventListener("click", function () {
+  document.location.href = "scoreBoard.html";
+});

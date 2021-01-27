@@ -37,13 +37,15 @@ main {
   line-height: 150%;
   font-size: 30px;
 }
-.answer {
+.answer,
+.board {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
   font-size: 18px;
 }
+
 #answers {
   margin: 0 auto;
   margin-top: 10px;
@@ -52,4 +54,14 @@ main {
 }
 .response {
   margin: 0 auto;
+}
+
+.scoreboard {
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  line-height: 100%;
+  font-size: 30px;
 }
